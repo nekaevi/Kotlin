@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Título da Tela -->
+    <TextView
+        android:id="@+id/txtAgendaConsulta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agendar Consulta"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"/>
+
+    <!-- Campo de Data e Hora -->
+    <EditText
+        android:id="@+id/edtDataHora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Data e Hora"
+        android:inputType="datetime"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Spinner de Seleção de Tipo de Consulta -->
+    <Spinner
+        android:id="@+id/spinnerTipoConsulta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Botão para Confirmar Agendamento -->
+    <Button
+        android:id="@+id/btnConfirmarAgendamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirmar Agendamento"
+        android:layout_marginTop="20dp" />
+
+    <!-- RecyclerView para listar consultas agendadas -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewConsultas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
